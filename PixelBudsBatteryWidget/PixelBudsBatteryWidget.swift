@@ -176,7 +176,7 @@ private struct PartRow: View {
                     .monospacedDigit()
             }
             ProgressView(value: Double(part.percent ?? 0), total: 100)
-                .tint(tint(part))
+                .tint(tintColor(part))
         }
         .opacity(part.percent == nil || part.asOf != nil ? 0.5 : 1)
     }
@@ -196,7 +196,7 @@ private struct PartGauge: View {
                     .monospacedDigit()
             }
             .gaugeStyle(.accessoryCircularCapacity)
-            .tint(tint(part))
+            .tint(tintColor(part))
             HStack(spacing: 2) {
                 if part.isCharging {
                     Image(systemName: "bolt.fill").foregroundStyle(.green)
@@ -230,7 +230,7 @@ private func percentText(_ part: BatterySnapshot.Part) -> String {
     part.percent.map { "\($0)%" } ?? "--"
 }
 
-private func tint(_ part: BatterySnapshot.Part) -> Color {
+private func tintColor(_ part: BatterySnapshot.Part) -> Color {
     guard let percent = part.percent else { return .gray }
     if percent <= 15 { return .red }
     if percent <= 30 { return .orange }
