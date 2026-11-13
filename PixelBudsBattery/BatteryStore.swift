@@ -138,6 +138,7 @@ final class BatteryStore {
             if !current.isStale { remember(current) }
             report = fillUnknownParts(of: current)
         }
+        WidgetBridge.publish(report)
         if report != previous {
             Log.store.info("showing \(self.report.map { "\($0)" } ?? "nothing", privacy: .public) (stream=\(self.streamReport != nil) gatt=\(self.gattReports.count) ads=\(self.advertisementReports.count))")
         }

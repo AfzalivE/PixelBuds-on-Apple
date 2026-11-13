@@ -33,6 +33,22 @@ After the buds disconnect, the app shows the last levels from the Message Stream
 
 When a part is "unknown" in a new report, the app shows the last known level of that part with its age, for example `44% · 12 min ago`.
 
+## Widget
+
+The app has a widget for macOS and iOS. Sizes: small and medium. On iOS, there are also Lock Screen sizes (rectangular and inline).
+
+- The widget shows the left bud, the right bud and the case. When the only source is the BLE Battery Service, it shows one "Buds" level.
+- A widget cannot use Bluetooth. The app saves the levels that it shows in an App Group (`group.com.example.PixelBudsBattery`). Then it tells WidgetKit to reload the widget. So the widget shows the levels from the last time that the app read them.
+- The app reloads the widget when a level, the charging state or the connection state changes. When only the time changes, it reloads the widget one time in 60 seconds at most.
+- Old levels are dimmed. The widget shows the age of the levels.
+- On iOS, the widget is only as current as the iOS app. The iOS app cannot read Pixel Buds Pro 2 levels (see "Platform limits").
+
+To use the widget, the App Group must be in your signing setup:
+
+1. Set your team for the `PixelBudsBattery` and `PixelBudsBatteryWidget` targets.
+2. Change the bundle IDs and the App Group ID to values of your own. The App Group ID is in `Shared/BatterySnapshot.swift` and in all four `.entitlements` files.
+3. With ad-hoc signing (no team), the widget can show "Open Buds Battery" all the time, because the app and the widget cannot share data.
+
 ## Platform limits
 
 - **iOS cannot open the Message Stream or Maestro.** iOS apps cannot open RFCOMM channels to Bluetooth Classic accessories. The only way is the External Accessory framework, and it works only with MFi accessories. Pixel Buds are not MFi.
@@ -73,3 +89,6 @@ xcodebuild -project PixelBudsBattery.xcodeproj -scheme PixelBudsBattery -configu
 - `MaestroClient.swift`: minimal Maestro client for battery info (macOS only).
 - `BatteryStore.swift`: merges the sources and keeps the last known levels.
 - `ContentView.swift`, `PixelBudsBatteryApp.swift`: the UI.
+- `WidgetBridge.swift`: saves the shown levels for the widget and reloads it.
+- `Shared/BatterySnapshot.swift`: the data that the app and the widget share (in both targets).
+- `PixelBudsBatteryWidget/PixelBudsBatteryWidget.swift`: the widget.

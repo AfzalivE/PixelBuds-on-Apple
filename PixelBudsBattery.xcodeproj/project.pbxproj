@@ -6,9 +6,42 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C0C0C0C0C0C0C0C0C0C0000E /* PixelBudsBatteryWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C0C0C0C0C0C0C0C0C0C00001 /* PixelBudsBatteryWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0C0C0C0C0C0C0C0C0C0000B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0B0B0B0B0B0B0B0B0B0000A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0C0C0C0C0C0C0C0C0C00007;
+			remoteInfo = PixelBudsBatteryWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0C0C0C0C0C0C0C0C0C0000D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C0C0C0C0C0C0C0C0C0C0000E /* PixelBudsBatteryWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B0B0B0B0B0B0B0B0B0B00001 /* PixelBudsBattery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelBudsBattery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B0B0B0B0B0B0B0B0B00010 /* PixelBudsBattery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PixelBudsBattery.entitlements; sourceTree = "<group>"; };
+		C0C0C0C0C0C0C0C0C0C00001 /* PixelBudsBatteryWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PixelBudsBatteryWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C0C0C0C0C0C0C0C0C00010 /* PixelBudsBattery-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PixelBudsBattery-iOS.entitlements"; sourceTree = "<group>"; };
+		C0C0C0C0C0C0C0C0C0C00011 /* PixelBudsBatteryWidget-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PixelBudsBatteryWidget-macOS.entitlements"; sourceTree = "<group>"; };
+		C0C0C0C0C0C0C0C0C0C00012 /* PixelBudsBatteryWidget-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PixelBudsBatteryWidget-iOS.entitlements"; sourceTree = "<group>"; };
+		C0C0C0C0C0C0C0C0C0C00013 /* PixelBudsBatteryWidget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PixelBudsBatteryWidget-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -17,10 +50,27 @@
 			path = PixelBudsBattery;
 			sourceTree = "<group>";
 		};
+		C0C0C0C0C0C0C0C0C0C00002 /* PixelBudsBatteryWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PixelBudsBatteryWidget;
+			sourceTree = "<group>";
+		};
+		C0C0C0C0C0C0C0C0C0C00003 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B0B0B0B0B0B0B0B0B0B00003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C0C0C0C0C0C0C0C0C00005 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,7 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				B0B0B0B0B0B0B0B0B0B00010 /* PixelBudsBattery.entitlements */,
+				C0C0C0C0C0C0C0C0C0C00010 /* PixelBudsBattery-iOS.entitlements */,
+				C0C0C0C0C0C0C0C0C0C00011 /* PixelBudsBatteryWidget-macOS.entitlements */,
+				C0C0C0C0C0C0C0C0C0C00012 /* PixelBudsBatteryWidget-iOS.entitlements */,
+				C0C0C0C0C0C0C0C0C0C00013 /* PixelBudsBatteryWidget-Info.plist */,
 				B0B0B0B0B0B0B0B0B0B00002 /* PixelBudsBattery */,
+				C0C0C0C0C0C0C0C0C0C00002 /* PixelBudsBatteryWidget */,
+				C0C0C0C0C0C0C0C0C0C00003 /* Shared */,
 				B0B0B0B0B0B0B0B0B0B00005 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B0B0B0B0B0B0B0B0B0B00001 /* PixelBudsBattery.app */,
+				C0C0C0C0C0C0C0C0C0C00001 /* PixelBudsBatteryWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,13 +114,16 @@
 				B0B0B0B0B0B0B0B0B0B00008 /* Sources */,
 				B0B0B0B0B0B0B0B0B0B00003 /* Frameworks */,
 				B0B0B0B0B0B0B0B0B0B00009 /* Resources */,
+				C0C0C0C0C0C0C0C0C0C0000D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C0C0C0C0C0C0C0C0C0C0000C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B0B0B0B0B0B0B0B0B0B00002 /* PixelBudsBattery */,
+				C0C0C0C0C0C0C0C0C0C00003 /* Shared */,
 			);
 			name = PixelBudsBattery;
 			packageProductDependencies = (
@@ -71,6 +131,29 @@
 			productName = PixelBudsBattery;
 			productReference = B0B0B0B0B0B0B0B0B0B00001 /* PixelBudsBattery.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C0C0C0C0C0C0C0C0C0C00007 /* PixelBudsBatteryWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0C0C0C0C0C0C0C0C0C00008 /* Build configuration list for PBXNativeTarget "PixelBudsBatteryWidget" */;
+			buildPhases = (
+				C0C0C0C0C0C0C0C0C0C00004 /* Sources */,
+				C0C0C0C0C0C0C0C0C0C00005 /* Frameworks */,
+				C0C0C0C0C0C0C0C0C0C00006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C0C0C0C0C0C0C0C0C0C00002 /* PixelBudsBatteryWidget */,
+				C0C0C0C0C0C0C0C0C0C00003 /* Shared */,
+			);
+			name = PixelBudsBatteryWidget;
+			packageProductDependencies = (
+			);
+			productName = PixelBudsBatteryWidget;
+			productReference = C0C0C0C0C0C0C0C0C0C00001 /* PixelBudsBatteryWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +166,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					B0B0B0B0B0B0B0B0B0B00006 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					C0C0C0C0C0C0C0C0C0C00007 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -102,12 +188,20 @@
 			projectRoot = "";
 			targets = (
 				B0B0B0B0B0B0B0B0B0B00006 /* PixelBudsBattery */,
+				C0C0C0C0C0C0C0C0C0C00007 /* PixelBudsBatteryWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B0B0B0B0B0B0B0B0B0B00009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C0C0C0C0C0C0C0C0C00006 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +218,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0C0C0C0C0C0C0C0C0C00004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0C0C0C0C0C0C0C0C0C0000C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0C0C0C0C0C0C0C0C0C00007 /* PixelBudsBatteryWidget */;
+			targetProxy = C0C0C0C0C0C0C0C0C0C0000B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B0B0B0B0B0B0B0B0B0B0000C /* Debug */ = {
@@ -174,6 +283,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "PixelBudsBattery-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "PixelBudsBattery-iOS.entitlements";
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = PixelBudsBattery.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
@@ -206,6 +317,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "PixelBudsBattery-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "PixelBudsBattery-iOS.entitlements";
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = PixelBudsBattery.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
@@ -234,6 +347,60 @@
 			};
 			name = Release;
 		};
+		C0C0C0C0C0C0C0C0C0C00009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "PixelBudsBatteryWidget-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "PixelBudsBatteryWidget-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "PixelBudsBatteryWidget-macOS.entitlements";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PixelBudsBatteryWidget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Buds Battery";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PixelBudsBattery.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0C0C0C0C0C0C0C0C0C0000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "PixelBudsBatteryWidget-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = "PixelBudsBatteryWidget-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "PixelBudsBatteryWidget-macOS.entitlements";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PixelBudsBatteryWidget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Buds Battery";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PixelBudsBattery.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -251,6 +418,15 @@
 			buildConfigurations = (
 				B0B0B0B0B0B0B0B0B0B0000C /* Debug */,
 				B0B0B0B0B0B0B0B0B0B0000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0C0C0C0C0C0C0C0C0C00008 /* Build configuration list for PBXNativeTarget "PixelBudsBatteryWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0C0C0C0C0C0C0C0C0C00009 /* Debug */,
+				C0C0C0C0C0C0C0C0C0C0000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
